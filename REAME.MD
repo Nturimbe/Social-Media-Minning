@@ -3,7 +3,7 @@
 Semester project for a 300-level Social Media Mining course. The goal is a
 research-backed problem, drilled down into an actual pipeline: literature
 review → data → models → statistical evaluation → write-up, at a standard
-that could plausibly be submitted as an academic paper.
+that could plausibly be submitted as a short academic paper.
 
 ## Problem Statement
 
@@ -48,6 +48,8 @@ Work in progress. Current milestones:
 - [x] Baseline NLP classifier (title-only, TF-IDF + Logistic Regression / SVM)
 - [x] Cascade-size diffusion proxy computed and statistically tested
 - [x] Colab notebook prepared for full network/graph analysis (UPFD)
+- [x] Reproducible scripts (`build_dataset.py`, `train_baseline.py`, `analyze_diffusion.py`)
+- [x] Annotated bibliography (`docs/bibliography.md`)
 - [ ] BERT fine-tuned classifier
 - [ ] Run UPFD graph analysis + GNN classifier (Colab, external to this repo's sandbox)
 - [ ] Joint analysis merging NLP + network results
@@ -63,10 +65,14 @@ Work in progress. Current milestones:
 │   └── processed_politifact.csv     # merged fake/real PolitiFact data + cascade_size
 ├── notebooks/
 │   └── UPFD_network_analysis.ipynb  # run in Google Colab — pulls UPFD propagation graphs
+├── scripts/
+│   ├── build_dataset.py             # merges fake/real CSVs, computes cascade_size
+│   ├── train_baseline.py            # TF-IDF + LogReg/SVM classifier
+│   └── analyze_diffusion.py         # Mann-Whitney U test on cascade size
 ├── results/
 │   └── baseline_results.json        # TF-IDF + LogReg/SVM accuracy & F1
 └── docs/
-    └── bibliography.md              # annotated bibliography (in progress)
+    └── bibliography.md              # annotated bibliography — 6 papers + Vosoughi et al. (2018)
 ```
 
 > Note: `FakeNewsNet/` (the cloned dataset repo) is not tracked in git — it's
@@ -115,8 +121,9 @@ Plus Vosoughi, Roy & Aral (2018, *Science*) as the foundational misinformation-d
 ```bash
 git clone https://github.com/KaiDMML/FakeNewsNet.git
 pip install pandas scikit-learn networkx matplotlib seaborn scipy --break-system-packages
-python scripts/build_dataset.py     # merges fake/real, computes cascade_size
-python scripts/train_baseline.py    # TF-IDF + LogReg/SVM
+python scripts/build_dataset.py       # merges fake/real, computes cascade_size
+python scripts/train_baseline.py      # TF-IDF + LogReg/SVM
+python scripts/analyze_diffusion.py   # Mann-Whitney U test on cascade size
 ```
 
 For the network/graph layer, open `notebooks/UPFD_network_analysis.ipynb`
