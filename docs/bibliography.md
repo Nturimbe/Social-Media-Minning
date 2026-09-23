@@ -99,7 +99,25 @@ explainability as a shared weak point across all three categories.
 
 ---
 
-## How These Fit Together
+### 7. Kubota, I. (2023). Twitter Japanese Defamation Detection Dataset [Data set]. Hugging Face.
+
+A 5,000-tweet Japanese Twitter dataset (IDs and annotations only, per Twitter's
+data-sharing terms) annotated along two axes: **target** (group, named
+individual, or unclear) and **label** — a four-way defamation typology:
+B1 (life-threatening/physical threat), B2 (insult to appearance or character),
+B3 (factual accusation that objectively damages reputation — e.g., alleging
+an arrest or affair), B4 (not defamatory). Included here as a cross-lingual
+side-note rather than a modeling dataset (the project's core results stay
+English-only), but the annotation scheme itself is independently useful: it
+converges, without reference to this project, on almost exactly the same
+three-way distinction (threat / insult / reputation-damaging factual claim)
+that motivates the project's taxonomy — external validation that the
+distinction is a real one worth modeling, not an artifact of this project's
+framing. A LUKE-large model fine-tuned on this dataset
+(`kubota/luke-large-defamation-detection-japanese`) demonstrates the
+labels are learnable by a transformer once an appropriate schema exists.
+
+---
 
 | Paper | Taxonomy leg | Contribution |
 |---|---|---|
@@ -110,8 +128,13 @@ explainability as a shared weak point across all three categories.
 | Rossi (2024), Paper II | Misinformation | Moderation-failure case study |
 | Burke-Moore, Williams & Bright (2025) | Political threats | Large-scale abuse detection |
 | Rayhan, Boeriswati & Iskandar (2025) | Defamation | Authorship attribution, explainability |
+| Kubota (2023) | Defamation (cross-lingual) | Independent 3-way taxonomy convergence |
 
-The recurring thread across all six: **detection systems are maturing
+The recurring thread across all seven: **detection systems are maturing
 technically (transformers, large-scale datasets) faster than the field is
 maturing conceptually (clear definitions, cross-category distinctions,
 explainability)**. This is the gap the project's taxonomy angle targets.
+Kubota's Japanese schema is a small but real piece of evidence that this
+three-way split (misinformation / threat / defamation) isn't specific to
+this project's framing — a completely independent annotation effort landed
+on nearly the same distinction within its own "defamation" umbrella.

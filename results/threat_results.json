@@ -1,0 +1,13 @@
+{
+  "classifier": {
+    "accuracy": 0.853540447851523,
+    "macro_f1": 0.7223300705294341
+  },
+  "chi_square_test": {
+    "chi2": 2.2593392564669683,
+    "p_value": 0.13281071617570603,
+    "significant": false,
+    "political_hate_rate": 0.0783132530120482,
+    "nonpolitical_hate_rate": 0.05742096437773506
+  }
+}
