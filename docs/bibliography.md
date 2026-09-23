@@ -83,9 +83,26 @@ political-threat leg of the taxonomy.
 
 ---
 
+### 6. Grimminger, L. & Klinger, R. (2021). Hate Towards the Political Opponent: A Twitter Corpus Study of the 2020 US Elections on the Basis of Offensive Speech and Stance Detection. *Proceedings of the 11th Workshop on Computational Approaches to Subjectivity, Sentiment and Social Media Analysis (WASSA @ EACL 2021)*.
+
+A purpose-built corpus of 3,000 tweets (2,400 train / 600 test) from the 2020
+US presidential election, annotated for stance toward Trump, Biden, and Kanye
+West (Favor/Against/Neither/Mixed/Neutral) and for hateful/offensive speech
+(HOF). Used directly in this project as the primary threat-leg dataset,
+superseding an earlier keyword-filtered proxy built from a general
+hate-speech corpus (Davidson et al., 2017 — retained in the repo as a
+supplementary comparison). Key result obtained here: tweets **against** a
+candidate show a significantly higher hate-speech rate than tweets
+**favoring** the same candidate — 18.5% vs. 12.9% for Trump (p = 0.0026)
+and, more strongly, 26.7% vs. 11.4% for Biden (p < 0.0001). A genuinely
+significant finding for the political-threat leg: opposition itself, not
+just political content in general, is where hostility concentrates.
+
+---
+
 ## Defamation
 
-### 6. Rayhan, M., Boeriswati, E., & Iskandar, I. (2025). Authorship Attribution on Anonymous Defamatory Texts in Social Media: A Systematic Review. Universitas Negeri Jakarta.
+### 7. Rayhan, M., Boeriswati, E., & Iskandar, I. (2025). Authorship Attribution on Anonymous Defamatory Texts in Social Media: A Systematic Review. Universitas Negeri Jakarta.
 
 A systematic review of 50 Scopus-indexed journal articles (2020–2025) on
 identifying authorship of anonymous defamatory content on social media.
@@ -99,7 +116,7 @@ explainability as a shared weak point across all three categories.
 
 ---
 
-### 7. Kubota, I. (2023). Twitter Japanese Defamation Detection Dataset [Data set]. Hugging Face.
+### 8. Kubota, I. (2023). Twitter Japanese Defamation Detection Dataset [Data set]. Hugging Face.
 
 A 5,000-tweet Japanese Twitter dataset (IDs and annotations only, per Twitter's
 data-sharing terms) annotated along two axes: **target** (group, named
@@ -127,6 +144,7 @@ labels are learnable by a transformer once an appropriate schema exists.
 | Karami, Zain & Jamal (2025) | Misinformation | Definitional inconsistency |
 | Rossi (2024), Paper II | Misinformation | Moderation-failure case study |
 | Burke-Moore, Williams & Bright (2025) | Political threats | Large-scale abuse detection |
+| Grimminger & Klinger (2021) | Political threats | Opposition-hostility correlation (used in modeling) |
 | Rayhan, Boeriswati & Iskandar (2025) | Defamation | Authorship attribution, explainability |
 | Kubota (2023) | Defamation (cross-lingual) | Independent 3-way taxonomy convergence |
 

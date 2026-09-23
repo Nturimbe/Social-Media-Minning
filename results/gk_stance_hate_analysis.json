@@ -1,0 +1,33 @@
+{
+  "Trump": {
+    "against_hate_rate": 0.18527315914489312,
+    "n_against": 842,
+    "favor_hate_rate": 0.1294871794871795,
+    "n_favor": 780,
+    "chi2": 9.036479515097923,
+    "p_value": 0.002646447843704729,
+    "significant": true
+  },
+  "Biden": {
+    "against_hate_rate": 0.26732673267326734,
+    "n_against": 404,
+    "favor_hate_rate": 0.11407766990291263,
+    "n_favor": 1236,
+    "chi2": 54.34444893429311,
+    "p_value": 1.6825261997554536e-13,
+    "significant": true
+  },
+  "West": {
+    "against_hate_rate": 0.0,
+    "n_against": 2,
+    "favor_hate_rate": 0.0,
+    "n_favor": 4,
+    "chi2": 0.0,
+    "p_value": 1.0,
+    "significant": false
+  },
+  "overall": {
+    "hate_rate": 0.11733333333333333,
+    "n": 3000
+  }
+}
