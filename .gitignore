@@ -1,0 +1,14 @@
+# secrets — never commit API keys
+.env
+*.env
+
+# environments / caches
+venv/
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+
+# large third-party clone (regenerate with: git clone https://github.com/KaiDMML/FakeNewsNet.git)
+FakeNewsNet/

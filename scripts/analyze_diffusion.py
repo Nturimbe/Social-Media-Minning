@@ -6,6 +6,10 @@ and real PolitiFact stories using a Mann-Whitney U test, since the
 distribution is heavily right-skewed (a few mega-viral stories in both
 classes) and not well suited to a t-test.
 
+NOTE: this reproduces the initial all-stories analysis. Many stories (especially real ones) have zero
+recorded tweets; notebooks/01_full_analysis.ipynb adds the zero-inflation robustness checks that qualify
+this result, and the paper reports those conclusions.
+
 Usage:
     python scripts/analyze_diffusion.py
         [--data data/processed_politifact.csv]

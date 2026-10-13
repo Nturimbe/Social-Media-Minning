@@ -1,0 +1,223 @@
+{
+  "misinformation_reach": {
+    "n_fake": 432,
+    "n_real": 624,
+    "share_with_tweets_fake": 0.9074074074074074,
+    "share_with_tweets_real": 0.655448717948718,
+    "n_zero_fake": 40,
+    "n_zero_real": 215,
+    "presence_chi2": 87.10429610046265,
+    "presence_p": 1.0294668989052989e-20,
+    "presence_odds_ratio": 5.15158924205379,
+    "presence_or_ci": [
+      3.576825756406397,
+      7.419671386371277
+    ],
+    "all_median_fake": 79.0,
+    "all_median_real": 8.0,
+    "all_mwu_p": 7.704117691121136e-14,
+    "all_rank_biserial": 0.26832932692307687,
+    "nz_n_fake": 392,
+    "nz_n_real": 409,
+    "nz_median_fake": 102.0,
+    "nz_median_real": 58.0,
+    "nz_mwu_p": 0.5003025218401755,
+    "nz_rank_biserial": 0.02752482411057322,
+    "nz_median_diff_ci": [
+      7.0,
+      74.0
+    ]
+  },
+  "misinformation_classifier": {
+    "majority_baseline_acc": 0.5896226415094339,
+    "Logistic Regression": {
+      "holdout_acc": 0.8632075471698113,
+      "holdout_f1": 0.8415300546448088,
+      "holdout_precision": 0.8020833333333334,
+      "holdout_recall": 0.8850574712643678,
+      "cv_acc_mean": 0.8314495215952785,
+      "cv_acc_sd": 0.02511091057612262,
+      "cv_f1_mean": 0.7948095763015267,
+      "cv_f1_sd": 0.03557186237958157
+    },
+    "Linear SVM": {
+      "holdout_acc": 0.8773584905660378,
+      "holdout_f1": 0.8539325842696629,
+      "holdout_precision": 0.8351648351648352,
+      "holdout_recall": 0.8735632183908046,
+      "cv_acc_mean": 0.8333407851202719,
+      "cv_acc_sd": 0.013767926064798623,
+      "cv_f1_mean": 0.7934130825178296,
+      "cv_f1_sd": 0.021050001162599273
+    }
+  },
+  "misinformation_top_terms": {
+    "fake": [
+      "trump",
+      "breaking",
+      "just",
+      "arrested",
+      "killed",
+      "million",
+      "michelle",
+      "dead",
+      "com",
+      "alabama",
+      "2017",
+      "official",
+      "muslim",
+      "suspended",
+      "man"
+    ],
+    "real": [
+      "transcript",
+      "remarks",
+      "transcripts",
+      "debate",
+      "ad",
+      "mccain",
+      "senate",
+      "interview",
+      "action",
+      "care",
+      "health",
+      "remarks president",
+      "week transcript",
+      "act",
+      "political"
+    ]
+  },
+  "joint": {
+    "all_stories_oof": {
+      "rho": 0.19980093479277533,
+      "p": 5.706227454311021e-11,
+      "n": 1056
+    },
+    "stories_with_tweets_oof": {
+      "rho": 0.050059701925298884,
+      "p": 0.15693313672526052,
+      "n": 801
+    },
+    "fake_with_tweets_oof": {
+      "rho": 0.06753174787941546,
+      "p": 0.18210090966625453,
+      "n": 392
+    },
+    "real_with_tweets_oof": {
+      "rho": 0.027996032051291232,
+      "p": 0.5723713455814953,
+      "n": 409
+    }
+  },
+  "gk_classifier": {
+    "majority_baseline_acc": 0.9016666666666666,
+    "hateful_share_train": 0.12208333333333334,
+    "hateful_share_test": 0.09833333333333333,
+    "Logistic Regression": {
+      "acc": 0.865,
+      "f1_hateful": 0.31932773109243695,
+      "f1_hateful_ci": [
+        0.2018348623853211,
+        0.4166666666666667
+      ],
+      "precision_hateful": 0.31666666666666665,
+      "recall_hateful": 0.3220338983050847,
+      "macro_f1": 0.6221985556479761
+    },
+    "Linear SVM": {
+      "acc": 0.8883333333333333,
+      "f1_hateful": 0.3963963963963964,
+      "f1_hateful_ci": [
+        0.2782487922705314,
+        0.507263630089717
+      ],
+      "precision_hateful": 0.4230769230769231,
+      "recall_hateful": 0.3728813559322034,
+      "macro_f1": 0.6674360310723947
+    }
+  },
+  "gk_top_terms_hateful": [
+    "trumpisanationaldisgrace",
+    "fuck",
+    "sleepy",
+    "fucking",
+    "moron",
+    "idiot",
+    "sleepy joe",
+    "fucktrump",
+    "ass",
+    "trumpcrimefamily",
+    "bullshit",
+    "shit",
+    "idiots",
+    "disgusting",
+    "pos",
+    "bitch",
+    "motherfucker",
+    "bs",
+    "ck",
+    "creepy joe"
+  ],
+  "gk_stance": {
+    "Trump": {
+      "n_against": 842,
+      "n_favor": 780,
+      "rate_against": 0.18527315914489312,
+      "rate_favor": 0.1294871794871795,
+      "ci_against": [
+        0.16048031492929793,
+        0.21292482381062694
+      ],
+      "ci_favor": [
+        0.10772895774563308,
+        0.1548771606333864
+      ],
+      "chi2": 9.036479515097925,
+      "p": 0.002646447843704729,
+      "p_bonferroni": 0.005292895687409458,
+      "odds_ratio": 1.5287936956961001,
+      "or_ci": [
+        1.1648571615124537,
+        2.0064349872438436
+      ]
+    },
+    "Biden": {
+      "n_against": 404,
+      "n_favor": 1236,
+      "rate_against": 0.26732673267326734,
+      "rate_favor": 0.11407766990291263,
+      "ci_against": [
+        0.22651015961699378,
+        0.3125265644445046
+      ],
+      "ci_favor": [
+        0.09753724287156222,
+        0.13300962698665192
+      ],
+      "chi2": 54.34444893429311,
+      "p": 1.6825261997554536e-13,
+      "p_bonferroni": 3.365052399510907e-13,
+      "odds_ratio": 2.8335250143760784,
+      "or_ci": [
+        2.1380936601305853,
+        3.7551507479820083
+      ]
+    }
+  },
+  "gk_against_trump_vs_biden": {
+    "rate_trump": 0.18527315914489312,
+    "rate_biden": 0.26732673267326734,
+    "chi2": 10.521663632590565,
+    "p": 0.001179832237454637
+  },
+  "gk_overall_hate_rate": 0.11733333333333333,
+  "gk_n": 3000,
+  "davidson": {
+    "n": 24783,
+    "n_political": 332,
+    "rate_political": 0.0783132530120482,
+    "rate_other": 0.05742096437773506,
+    "chi2": 2.2593392564669683,
+    "p": 0.13281071617570603
+  }
+}

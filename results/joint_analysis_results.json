@@ -1,0 +1,15 @@
+{
+  "joint_analysis": {
+    "description": "Spearman correlation between classifier P(fake) confidence and cascade_size (diffusion proxy)",
+    "all_test_stories": {
+      "rho": 0.21196461254674367,
+      "p_value": 0.0019134696583064808,
+      "n": 212
+    },
+    "fake_stories_only": {
+      "rho": 0.13245815902284377,
+      "p_value": 0.2213240326962087,
+      "n": 87
+    }
+  }
+}

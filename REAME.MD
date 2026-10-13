@@ -58,7 +58,10 @@ Work in progress. Current milestones:
       correlates with higher hate-speech rates (p < 0.01 for both Trump and Biden)
 - [x] Defamation-leg dataset search exhausted for English — documented as a field-level
       gap; Japanese dataset (Kubota, 2023) used as a cross-lingual literature note only
-- [ ] BERT fine-tuned classifier (misinformation leg)
+- [ ] BERT fine-tuned classifier (misinformation leg) — Colab notebook ready
+      (`notebooks/BERT_finetuning.ipynb`); local sandbox can't reach Hugging
+      Face's model hub to download pretrained weights, same class of
+      constraint as the UPFD/Twitter API issues above
 - [ ] Run UPFD graph analysis + GNN classifier (Colab, external to this repo's sandbox)
 - [ ] Joint analysis merging NLP + network results (misinformation leg)
 - [ ] Expand political-context filtering for the threat leg (current keyword
@@ -78,7 +81,8 @@ Work in progress. Current milestones:
 │   ├── davidson_hate_speech.csv       # threat leg (supplementary): full hate-speech corpus
 │   └── political_threat_subset.csv    # threat leg (supplementary): political-keyword subset
 ├── notebooks/
-│   └── UPFD_network_analysis.ipynb    # run in Google Colab — pulls UPFD propagation graphs
+│   ├── UPFD_network_analysis.ipynb    # run in Google Colab — pulls UPFD propagation graphs
+│   └── BERT_finetuning.ipynb          # run in Google Colab — DistilBERT on misinformation titles
 ├── scripts/
 │   ├── build_dataset.py               # misinformation: merges fake/real CSVs, computes cascade_size
 │   ├── train_baseline.py              # misinformation: TF-IDF + LogReg/SVM classifier
